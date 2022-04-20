@@ -1,0 +1,161 @@
+//*Variables*//
+
+$cl__bg--1: hsl(31, 77%, 52%);
+$cl__bg--2: hsl(184, 100%, 22%);
+$cl__bg--3: hsl(179, 100%, 13%);
+
+$p: hsla(0, 0%, 100%, 0.75);
+$bg: hsl(0, 0%, 95%);
+
+//*Fonts*//
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+//*CSS*//
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $bg;
+  box-sizing: border-box;
+}
+
+//*main*//
+
+main {
+  display: flex;
+  transform: translate(0% -50%);
+  height: 70vh;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50vh;
+  transform: translatey(-50%);
+  max-width: 1200px;
+  min-width: 850px;
+  min-height: 600px;
+  max-height: 700px;
+  .card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    padding: 45px;
+    & p {
+      font-family: "Lexend Deca";
+      color: $p;
+      line-height: 30px;
+      font-size: 15px;
+    }
+    & .txt {
+      margin-bottom: 100px;
+    }
+    & h1 {
+      font-family: "Big Shoulders Display";
+      margin: 0;
+      font-size: 50px;
+      color: $bg;
+    }
+    & .btn {
+      font-family: "Lexend Deca";
+      background: $bg;
+      padding: 10px 25px 10px 25px;
+      text-align: center;
+      border-radius: 40px;
+      margin-right: 3vw;
+      border: 2px solid $bg;
+      &--1 {
+        color: $cl__bg--1;
+        &:hover {
+          background: $cl__bg--1;
+        }
+      }
+      &--2 {
+        color: $cl__bg--2;
+        &:hover {
+          background: $cl__bg--2;
+        }
+      }
+      &--3 {
+        color: $cl__bg--3;
+        &:hover {
+          background: $cl__bg--3;
+        }
+      }
+      &:hover {
+        color: $bg;
+      }
+    }
+    &__1 {
+      background: $cl__bg--1;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    &__2 {
+      background: $cl__bg--2;
+    }
+    &__3 {
+      background: $cl__bg--3;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    img {
+      width: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding-bottom: 50px;
+  }
+  main {
+    flex-direction: column;
+    min-width: auto;
+    height: auto;
+    & .txt {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    & .btn {
+      margin-top: 0;
+    }
+
+    & .card {
+      &__1 {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+      }
+      &__3 {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 50px;
+      }
+    }
+    img {
+      padding-bottom: 30px;
+    }
+    h1 {
+      padding-bottom: 20px;
+    }
+    & .btn {
+      max-width: 200px;
+    }
+  }
+}
+
+//*Footer*//
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
