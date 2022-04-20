@@ -45,6 +45,7 @@ main {
       color: $p;
       line-height: 30px;
       font-size: 15px;
+      transition: color 0.2s ease-in-out;
     }
     & .txt {
       margin-bottom: 100px;
@@ -63,8 +64,10 @@ main {
       border-radius: 40px;
       margin-right: 3vw;
       border: 2px solid $bg;
+      transition: all 0.2s ease-in-out;
       &--1 {
         color: $cl__bg--1;
+
         &:hover {
           background: $cl__bg--1;
         }
