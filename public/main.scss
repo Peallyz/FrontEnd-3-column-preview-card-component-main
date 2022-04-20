@@ -17,14 +17,12 @@ body {
   margin: 0;
   padding: 0;
   background: $bg;
-  box-sizing: border-box;
 }
 
 //*main*//
 
 main {
   display: flex;
-  transform: translate(0% -50%);
   height: 70vh;
   width: 70vw;
   margin-left: auto;
@@ -109,12 +107,18 @@ main {
 
 @media screen and (max-width: 1000px) {
   body {
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
   }
   main {
+    display: flex;
     flex-direction: column;
-    min-width: auto;
-    height: auto;
+    min-width: 90%;
+    margin: 5em 0;
+    transform: translatey(0);
+    align-items: center;
     & .txt {
       padding-bottom: 0;
       margin-bottom: 0;
@@ -131,7 +135,6 @@ main {
       &__3 {
         border-top-right-radius: 0px;
         border-bottom-left-radius: 10px;
-        margin-bottom: 50px;
       }
     }
     img {
@@ -149,10 +152,8 @@ main {
 //*Footer*//
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
+  align-content: center;
+  margin-top: 55em;
 }
 
 .attribution {
